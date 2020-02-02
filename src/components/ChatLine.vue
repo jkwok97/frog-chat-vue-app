@@ -31,7 +31,7 @@ export default {
     methods: {
         addMessage() {
             let d = new Date();
-            var datestring = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
+            let datestring = d.getDate()  + "-" + (d.getMonth()+1) + "-" + d.getFullYear() + " " + d.getHours() + ":" + d.getMinutes();
             let newMessage = {date: datestring, message: this.message};
             eventBus.addMessage(newMessage)
             this.message = '';
